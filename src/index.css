@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-brand-sculk: #031926;
+  --color-brand-sculkCyan: #00f5d4;
+  --color-brand-sculkDark: #0b132b;
+  --color-brand-neonGreen: #39ff14;
+  --color-brand-bedrock: #090d16;
+  --color-brand-slate950: #060a12;
+  --color-brand-cardBg: rgba(15, 23, 42, 0.75);
+
+  --color-surface: #111416;
+  --color-surface-dim: #111416;
+  --color-surface-bright: #37393c;
+  --color-surface-container-lowest: #0c0f11;
+  --color-surface-container-low: #191c1e;
+  --color-surface-container: #1d2022;
+  --color-surface-container-high: #272a2c;
+  --color-surface-container-highest: #323537;
+  --color-on-surface: #e1e2e5;
+  --color-on-surface-variant: #bdcab7;
+  --color-outline: #889483;
+  --color-outline-variant: #3e4a3b;
+
+  --color-primary: #6cde6b;
+  --color-on-primary: #003908;
+  --color-primary-container: #3cb043;
+  --color-secondary: #00f5d4;
+  --color-secondary-fixed: #9cf0ff;
+  --color-on-secondary: #00363d;
+  --color-tertiary: #ffb870;
+  --color-tertiary-container: #e08500;
+  --color-error: #ff5555;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060a12;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 245, 212, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5d4;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+  background: rgba(13, 21, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 245, 212, 0.18);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card:hover {
+  border-color: rgba(0, 245, 212, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(0, 245, 212, 0.25);
+}
+
+/* Subtle grid line pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Pixel rendering for Minecraft sprites */
+.image-rendering-pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Glow effects */
+.shadow-glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(0, 245, 212, 0.4);
+}
+.shadow-glow-green {
+  box-shadow: 0 0 25px -5px rgba(57, 255, 20, 0.35);
+}
+.shadow-glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(108, 222, 107, 0.35);
+}
+
+/* Pulsing animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
