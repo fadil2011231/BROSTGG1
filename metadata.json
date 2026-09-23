@@ -1,0 +1,8 @@
+{
+  "name": "Minecraft Tools & Community Hub",
+  "description": "Creator toolkit & utilities for survival builders, speedrunners, and content creators with skin & totem compiler, god seeds vault, MOTD editor, and FPS booster suite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
