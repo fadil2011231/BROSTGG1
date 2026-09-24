@@ -7,6 +7,7 @@ import SeedVault from './components/SeedVault';
 import MotdEditor from './components/MotdEditor';
 import FpsBooster from './components/FpsBooster';
 import MiniGame from './components/MiniGame';
+import PixelArtGenerator from './components/PixelArtGenerator';
 import CommunityCallout from './components/CommunityCallout';
 import Footer from './components/Footer';
 import ToastContainer from './components/Toast';
@@ -91,6 +92,9 @@ export default function App() {
 
           {/* Module 05: Arcade Clicker Mini Game */}
           <MiniGame />
+
+          {/* Module 06: Pixel Art Generator */}
+          <PixelArtGenerator />
         </div>
       </main>
 
