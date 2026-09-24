@@ -6,6 +6,7 @@ import SkinStudio from './components/SkinStudio';
 import SeedVault from './components/SeedVault';
 import MotdEditor from './components/MotdEditor';
 import FpsBooster from './components/FpsBooster';
+import MiniGame from './components/MiniGame';
 import CommunityCallout from './components/CommunityCallout';
 import Footer from './components/Footer';
 import ToastContainer from './components/Toast';
@@ -20,7 +21,6 @@ export default function App() {
     (message: string, type: 'success' | 'info' | 'error' = 'success') => {
       const id = `${Date.now()}-${Math.random()}`;
       setToasts((prev) => [...prev, { id, message, type }]);
-
       setTimeout(() => {
         setToasts((prev) => prev.filter((t) => t.id !== id));
       }, 3200);
@@ -88,6 +88,9 @@ export default function App() {
 
           {/* Module 04: FPS Suite & JVM Flagging */}
           <FpsBooster onNotify={showToast} />
+
+          {/* Module 05: Arcade Clicker Mini Game */}
+          <MiniGame />
         </div>
       </main>
 
